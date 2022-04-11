@@ -40,18 +40,6 @@ def index():
     cat_slug = [el.text.lower().replace(' ', '-') for el in elements]
 
     data = list()
-    # data.append({
-    #     'category': cat_list,
-    #     'image_link': img_list,
-    #     'slug': cat_slug
-    # })
-
-
-    # cur.execute(f"INSERT INTO robot (categories,image,slug) VALUES ('category', 'image_link','slug')")
-    # mysql.connection.commit()
-   #cur.close()
-  # print( data)
-   #return ("done")
 
 
     for i, cat in enumerate(cat_list):
@@ -121,12 +109,7 @@ def index():
             'content': cont_list[k]
         })
 
-    # crawl_res = list()
-    # crawl_res.append({
-    #     "categories": cat.text,
-    #     "img": img_list[i]("src"),
-    #     "slug": cat.lower().replace(' ', '-'),
-    # })
+   
 
        #cur.execute(f"INSERT INTO robot (categories,image,slug) VALUES ('{category}', '{image_link}', '{slug}')")
        #mysql.connection.commit()
@@ -139,36 +122,8 @@ def index():
 
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-# try:
-#     element = WebDriverWait(driver, 10).until(
-#         EC.presence_of_element_located((By.LINK_TEXT, "Financial Planning"))
-#     )
-#     element.click()
-#     courses = driver.find_element_by_class_name("courses")
-#     print(courses.text)
-
-#     # elems = driver.find_elements_by_xpath("//a[@href]")
-#     # for elem in elems:
-#     #    print(elem.get_attribute("href"))
-#
-#     elementx = WebDriverWait(driver, 10).until(
-#         EC.presence_of_element_located((By.LINK_TEXT, "Automatic Savings and Investment Plans"))
-#     )
-#     elementx.click()
-#     element = driver.find_element_by_class_name("article-content")
-#     print(element.text)
-#
-#     time.sleep(10)
-#
-# except:
-#     driver.quit()
 
 
 
